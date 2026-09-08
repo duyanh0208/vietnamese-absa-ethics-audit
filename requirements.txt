@@ -1,0 +1,8 @@
+# Baseline chay tren CPU, khong tai model tu internet.
+# Ghim phien ban chinh xac: hanh vi cua solver trong scikit-learn co thay doi
+# giua cac ban minor, nen rang buoc >= khong du de tai lap dung con so.
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+scipy==1.17.1
+joblib==1.5.3

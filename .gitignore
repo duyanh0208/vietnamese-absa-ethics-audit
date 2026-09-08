@@ -1,0 +1,11 @@
+# Khong phan phoi lai du lieu goc: giay phep UIT-ViSFD khong neu ro quyen
+# phan phoi lai. Dung scripts/download_data.sh de tai tu nguon chinh thuc.
+data/raw/
+data/processed/
+
+# Artifact huan luyen, sinh lai bang src/train_baseline.py
+results/*.joblib
+
+.venv/
+__pycache__/
+*.pyc
