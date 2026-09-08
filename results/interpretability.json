@@ -1,0 +1,188 @@
+{
+  "Negative": [
+    {
+      "feature": "nhanh hết",
+      "weight": 2.6959157274528507
+    },
+    {
+      "feature": "tệ",
+      "weight": 2.5758487876733853
+    },
+    {
+      "feature": "cũng bị",
+      "weight": 1.913779834712475
+    },
+    {
+      "feature": "chán",
+      "weight": 1.8944153585466021
+    },
+    {
+      "feature": "phí tiền",
+      "weight": 1.756500633700478
+    },
+    {
+      "feature": "tê",
+      "weight": 1.6689956189825523
+    },
+    {
+      "feature": "ko",
+      "weight": 1.6450571228830073
+    },
+    {
+      "feature": "cao so",
+      "weight": 1.6250511011130433
+    },
+    {
+      "feature": "chưa tốt",
+      "weight": 1.6165249946002118
+    },
+    {
+      "feature": "giá hơi",
+      "weight": 1.5840988265632525
+    },
+    {
+      "feature": "kém",
+      "weight": 1.5624341085391145
+    },
+    {
+      "feature": "chưa được",
+      "weight": 1.5456501764510961
+    },
+    {
+      "feature": "ko được",
+      "weight": 1.531037966940774
+    },
+    {
+      "feature": "thất vọng",
+      "weight": 1.5091416837207423
+    },
+    {
+      "feature": "quá tệ",
+      "weight": 1.4737409716842793
+    }
+  ],
+  "Neutral": [
+    {
+      "feature": "tạm",
+      "weight": 3.031867198165677
+    },
+    {
+      "feature": "cũng ổn",
+      "weight": 2.8671777300394674
+    },
+    {
+      "feature": "tầm giá",
+      "weight": 2.6379552418455616
+    },
+    {
+      "feature": "xài cũng",
+      "weight": 2.2011621309259115
+    },
+    {
+      "feature": "tầm",
+      "weight": 2.130899134161838
+    },
+    {
+      "feature": "như vậy",
+      "weight": 1.9254028452326135
+    },
+    {
+      "feature": "dùng tốt",
+      "weight": 1.9220702375380063
+    },
+    {
+      "feature": "đủ dùng",
+      "weight": 1.8141869463559446
+    },
+    {
+      "feature": "nữa thì",
+      "weight": 1.76036175042718
+    },
+    {
+      "feature": "hơi nóng",
+      "weight": 1.7561479063172978
+    },
+    {
+      "feature": "thấy cũng",
+      "weight": 1.6955612223329664
+    },
+    {
+      "feature": "ok loa",
+      "weight": 1.6494764353654103
+    },
+    {
+      "feature": "gì camera",
+      "weight": 1.6178657035909443
+    },
+    {
+      "feature": "máy thấy",
+      "weight": 1.5896343407344071
+    },
+    {
+      "feature": "trước chụp",
+      "weight": 1.5871530073975826
+    }
+  ],
+  "Positive": [
+    {
+      "feature": "tốt",
+      "weight": 2.788911004250481
+    },
+    {
+      "feature": "rẻ",
+      "weight": 2.7497391197017476
+    },
+    {
+      "feature": "ok",
+      "weight": 2.6861593952281417
+    },
+    {
+      "feature": "đẹp",
+      "weight": 2.4195660665286125
+    },
+    {
+      "feature": "trâu",
+      "weight": 2.2076774699373924
+    },
+    {
+      "feature": "pin trâu",
+      "weight": 2.016335006649715
+    },
+    {
+      "feature": "không bị",
+      "weight": 1.980462636583538
+    },
+    {
+      "feature": "không nóng",
+      "weight": 1.8994257938023238
+    },
+    {
+      "feature": "ổn",
+      "weight": 1.8720888789032317
+    },
+    {
+      "feature": "mượt",
+      "weight": 1.747892922053445
+    },
+    {
+      "feature": "được giảm",
+      "weight": 1.6643370749662458
+    },
+    {
+      "feature": "pin xài",
+      "weight": 1.5251633272545957
+    },
+    {
+      "feature": "dùng ổn",
+      "weight": 1.5223391095434373
+    },
+    {
+      "feature": "mượt mà",
+      "weight": 1.5054198838183805
+    },
+    {
+      "feature": "chê",
+      "weight": 1.492975080626452
+    }
+  ]
+}

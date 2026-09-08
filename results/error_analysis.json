@@ -1,0 +1,926 @@
+{
+  "purpose": "Phan loai co he thong nguyen nhan du doan sai, phuc vu muc E3 cua docs/CHECKLIST.md.",
+  "tuong_phan_kiem_soat_do_dai": {
+    "ghi_chu": "Ty le sai theo tung tu phan vi do dai, tach theo viec binh luan co tu tuong phan trong cau hay khong. Neu chenh lech con giu trong TUNG tu phan vi thi tuong phan la nguyen nhan doc lap chu khong phai bien thay the cho do dai.",
+    "toan_tap_test": {
+      "ty_le_sai_khong_tuong_phan": 0.1745,
+      "ty_le_sai_co_tuong_phan": 0.3278
+    },
+    "theo_tu_phan_vi": {
+      "Q1": {
+        "khoang_tu": [
+          2,
+          23
+        ],
+        "ty_le_sai_khong_tuong_phan": 0.1307,
+        "n_khong_tuong_phan": 1477,
+        "ty_le_sai_co_tuong_phan": 0.2763,
+        "n_co_tuong_phan": 228
+      },
+      "Q2": {
+        "khoang_tu": [
+          24,
+          32
+        ],
+        "ty_le_sai_khong_tuong_phan": 0.1542,
+        "n_khong_tuong_phan": 1459,
+        "ty_le_sai_co_tuong_phan": 0.274,
+        "n_co_tuong_phan": 292
+      },
+      "Q3": {
+        "khoang_tu": [
+          33,
+          48
+        ],
+        "ty_le_sai_khong_tuong_phan": 0.1931,
+        "n_khong_tuong_phan": 1129,
+        "ty_le_sai_co_tuong_phan": 0.3269,
+        "n_co_tuong_phan": 465
+      },
+      "Q4": {
+        "khoang_tu": [
+          49,
+          205
+        ],
+        "ty_le_sai_khong_tuong_phan": 0.2564,
+        "n_khong_tuong_phan": 897,
+        "ty_le_sai_co_tuong_phan": 0.3639,
+        "n_co_tuong_phan": 775
+      }
+    }
+  },
+  "phuong_phap": "Lay mau ngau nhien co seed tu cac du doan sai tren tap test. Voi moi mau, dung phan ra tuyen tinh chinh xac trong src/interpret.py de tach dong gop vao logit cua lop duoc du doan theo bon loai dac trung, roi tong hop.",
+  "summary": {
+    "n_sai_toan_bo": 1443,
+    "n_du_doan_toan_bo": 6722,
+    "ty_le_sai": 0.2147,
+    "n_mau_phan_tich": 50,
+    "seed": 42,
+    "phan_bo_nham_lan": {
+      "Positive->Negative": 13,
+      "Neutral->Negative": 12,
+      "Positive->Neutral": 9,
+      "Negative->Positive": 8,
+      "Neutral->Positive": 6,
+      "Negative->Neutral": 2
+    },
+    "phan_bo_aspect": {
+      "BATTERY": 10,
+      "CAMERA": 8,
+      "GENERAL": 7,
+      "FEATURES": 7,
+      "PERFORMANCE": 7,
+      "DESIGN": 5,
+      "PRICE": 3,
+      "SER&ACC": 2,
+      "SCREEN": 1
+    },
+    "loai_dac_trung_dan_dau": {
+      "aspect_onehot": 32,
+      "ngram_tu": 18
+    },
+    "ty_le_dong_gop_trung_binh": {
+      "ngram_tu": 0.6583,
+      "ngram_ky_tu": 0.1458,
+      "aspect_onehot": 0.1776,
+      "artifact_ky_tu": 0.0182
+    },
+    "co_tu_tuong_phan": 21,
+    "lien_quan_lop_neutral": 29,
+    "dao_cuc_nang": 21,
+    "prob_trung_binh": 0.7517,
+    "doi_chung_du_doan_dung": {
+      "n_mau": 50,
+      "loai_dac_trung_dan_dau": {
+        "aspect_onehot": 39,
+        "ngram_tu": 10,
+        "ngram_ky_tu": 1
+      },
+      "ty_le_dong_gop_trung_binh": {
+        "ngram_tu": 0.5995,
+        "ngram_ky_tu": 0.1536,
+        "aspect_onehot": 0.2361,
+        "artifact_ky_tu": 0.0108
+      },
+      "co_tu_tuong_phan": 5,
+      "prob_trung_binh": 0.8789
+    }
+  },
+  "cases": [
+    {
+      "aspect": "SER&ACC",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 21,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.939797082560484,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.5168305464121576,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.2227,
+        "ngram_tu": 0.4586,
+        "ngram_ky_tu": 0.279,
+        "artifact_ky_tu": 0.0397
+      }
+    },
+    {
+      "aspect": "CAMERA",
+      "true": "Neutral",
+      "pred": "Positive",
+      "confusion": "Neutral->Positive",
+      "n_words": 59,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.7053004923428102,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.30901517391362365,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.1405,
+        "ngram_tu": 0.8595
+      }
+    },
+    {
+      "aspect": "GENERAL",
+      "true": "Negative",
+      "pred": "Positive",
+      "confusion": "Negative->Positive",
+      "n_words": 42,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.45099077612418786,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 1.538367276438328,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.4558,
+        "ngram_tu": 0.4086,
+        "ngram_ky_tu": 0.1356
+      }
+    },
+    {
+      "aspect": "FEATURES",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 28,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.9563001682758963,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 1.314491543624515,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.4257,
+        "artifact_ky_tu": 0.0958,
+        "ngram_tu": 0.368,
+        "ngram_ky_tu": 0.1104
+      }
+    },
+    {
+      "aspect": "PERFORMANCE",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 92,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.9530814807400342,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": -0.12270016577750262,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.8746,
+        "ngram_ky_tu": 0.078,
+        "aspect_onehot": 0.0475
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Negative",
+      "pred": "Positive",
+      "confusion": "Negative->Positive",
+      "n_words": 26,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.5389472914641024,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.20543174977098816,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.7914,
+        "ngram_ky_tu": 0.2086
+      }
+    },
+    {
+      "aspect": "PERFORMANCE",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 36,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.7907829659546578,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.16786088752031297,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.7233,
+        "aspect_onehot": 0.0563,
+        "ngram_ky_tu": 0.2204
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Negative",
+      "pred": "Positive",
+      "confusion": "Negative->Positive",
+      "n_words": 37,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.8415065103578742,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.4071197727140756,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.5666,
+        "ngram_ky_tu": 0.4334
+      }
+    },
+    {
+      "aspect": "FEATURES",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 59,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.9600694210965348,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 1.314491543624515,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.335,
+        "ngram_tu": 0.5699,
+        "ngram_ky_tu": 0.0952
+      }
+    },
+    {
+      "aspect": "GENERAL",
+      "true": "Positive",
+      "pred": "Neutral",
+      "confusion": "Positive->Neutral",
+      "n_words": 59,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.5388715277138857,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.3432771949489993,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.1644,
+        "ngram_tu": 0.7731,
+        "ngram_ky_tu": 0.0436,
+        "artifact_ky_tu": 0.0189
+      }
+    },
+    {
+      "aspect": "GENERAL",
+      "true": "Neutral",
+      "pred": "Positive",
+      "confusion": "Neutral->Positive",
+      "n_words": 19,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.44162301234934626,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 1.538367276438328,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.3779,
+        "ngram_tu": 0.4856,
+        "ngram_ky_tu": 0.1366
+      }
+    },
+    {
+      "aspect": "SCREEN",
+      "true": "Neutral",
+      "pred": "Positive",
+      "confusion": "Neutral->Positive",
+      "n_words": 33,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.9851298839204701,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.17626458949301135,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.9008,
+        "ngram_ky_tu": 0.0992
+      }
+    },
+    {
+      "aspect": "CAMERA",
+      "true": "Positive",
+      "pred": "Neutral",
+      "confusion": "Positive->Neutral",
+      "n_words": 59,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.5847786604388288,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.09750090685739297,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.9085,
+        "aspect_onehot": 0.0432,
+        "artifact_ky_tu": 0.0263,
+        "ngram_ky_tu": 0.0221
+      }
+    },
+    {
+      "aspect": "DESIGN",
+      "true": "Negative",
+      "pred": "Neutral",
+      "confusion": "Negative->Neutral",
+      "n_words": 72,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.8053963566238279,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.5804244267369975,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.1634,
+        "ngram_tu": 0.5947,
+        "ngram_ky_tu": 0.2419
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 43,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.9444651922189188,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 0.2469226121491725,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.1043,
+        "ngram_tu": 0.621,
+        "ngram_ky_tu": 0.1958,
+        "artifact_ky_tu": 0.0789
+      }
+    },
+    {
+      "aspect": "PERFORMANCE",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 31,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.4392191661290551,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.17218731560219236,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.6958,
+        "aspect_onehot": 0.0444,
+        "ngram_ky_tu": 0.2598
+      }
+    },
+    {
+      "aspect": "FEATURES",
+      "true": "Negative",
+      "pred": "Positive",
+      "confusion": "Negative->Positive",
+      "n_words": 38,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.896467413403412,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.8035746304777939,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.2554,
+        "ngram_tu": 0.6934,
+        "ngram_ky_tu": 0.0511
+      }
+    },
+    {
+      "aspect": "DESIGN",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 32,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.4999371360618091,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": -0.3062227669263216,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.708,
+        "aspect_onehot": 0.1108,
+        "ngram_ky_tu": 0.1811
+      }
+    },
+    {
+      "aspect": "PRICE",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 29,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.5203063124308286,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.9543037536148997,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.323,
+        "ngram_ky_tu": 0.2032,
+        "ngram_tu": 0.4237,
+        "artifact_ky_tu": 0.0501
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 29,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.6904220836597547,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 0.2469226121491725,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.098,
+        "ngram_tu": 0.7774,
+        "ngram_ky_tu": 0.1246
+      }
+    },
+    {
+      "aspect": "FEATURES",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 30,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.9713361324924372,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 1.314491543624515,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.4204,
+        "ngram_tu": 0.4528,
+        "ngram_ky_tu": 0.1268
+      }
+    },
+    {
+      "aspect": "GENERAL",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 80,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.8133861269968738,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -1.1950900814892385,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.3533,
+        "ngram_tu": 0.5909,
+        "ngram_ky_tu": 0.0558
+      }
+    },
+    {
+      "aspect": "GENERAL",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 22,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.9665179807040453,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -1.1950900814892385,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.2949,
+        "ngram_tu": 0.3987,
+        "ngram_ky_tu": 0.247,
+        "artifact_ky_tu": 0.0594
+      }
+    },
+    {
+      "aspect": "GENERAL",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 78,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.6076380763486744,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -1.1950900814892385,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.336,
+        "ngram_tu": 0.5925,
+        "ngram_ky_tu": 0.0715
+      }
+    },
+    {
+      "aspect": "DESIGN",
+      "true": "Negative",
+      "pred": "Positive",
+      "confusion": "Negative->Positive",
+      "n_words": 24,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.9185988561019665,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 0.29822829657725125,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.1047,
+        "ngram_tu": 0.6967,
+        "ngram_ky_tu": 0.1986
+      }
+    },
+    {
+      "aspect": "FEATURES",
+      "true": "Neutral",
+      "pred": "Positive",
+      "confusion": "Neutral->Positive",
+      "n_words": 51,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.5432277482850946,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.8035746304777939,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.2995,
+        "ngram_tu": 0.5878,
+        "ngram_ky_tu": 0.1127
+      }
+    },
+    {
+      "aspect": "GENERAL",
+      "true": "Neutral",
+      "pred": "Positive",
+      "confusion": "Neutral->Positive",
+      "n_words": 36,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.6658838729583795,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 1.538367276438328,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.4034,
+        "ngram_tu": 0.3551,
+        "ngram_ky_tu": 0.2416
+      }
+    },
+    {
+      "aspect": "PRICE",
+      "true": "Positive",
+      "pred": "Neutral",
+      "confusion": "Positive->Neutral",
+      "n_words": 31,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.8343077093924768,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 2.411769743232324,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.4461,
+        "ngram_tu": 0.3547,
+        "ngram_ky_tu": 0.1661,
+        "artifact_ky_tu": 0.0331
+      }
+    },
+    {
+      "aspect": "CAMERA",
+      "true": "Positive",
+      "pred": "Neutral",
+      "confusion": "Positive->Neutral",
+      "n_words": 100,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.6566890597639654,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.177364325558451,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.8624,
+        "aspect_onehot": 0.0405,
+        "artifact_ky_tu": 0.0257,
+        "ngram_ky_tu": 0.0714
+      }
+    },
+    {
+      "aspect": "SER&ACC",
+      "true": "Negative",
+      "pred": "Positive",
+      "confusion": "Negative->Positive",
+      "n_words": 38,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.8693648758807294,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 0.8722353572318277,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.2831,
+        "ngram_tu": 0.6322,
+        "ngram_ky_tu": 0.0847
+      }
+    },
+    {
+      "aspect": "PERFORMANCE",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 39,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.8010183487619525,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": -0.1901803283114997,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.7216,
+        "ngram_ky_tu": 0.2174,
+        "aspect_onehot": 0.038,
+        "artifact_ky_tu": 0.023
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 33,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.7664839202102163,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 0.2469226121491725,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.0854,
+        "ngram_tu": 0.7669,
+        "ngram_ky_tu": 0.1477
+      }
+    },
+    {
+      "aspect": "DESIGN",
+      "true": "Neutral",
+      "pred": "Positive",
+      "confusion": "Neutral->Positive",
+      "n_words": 18,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.9314283824318841,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.3629295313596483,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.6311,
+        "aspect_onehot": 0.0849,
+        "artifact_ky_tu": 0.0655,
+        "ngram_ky_tu": 0.2185
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 31,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.460629600115898,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.25617926820683934,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.6134,
+        "aspect_onehot": 0.0916,
+        "ngram_ky_tu": 0.2531,
+        "artifact_ky_tu": 0.042
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 62,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.8656490370439913,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 0.2469226121491725,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.0861,
+        "ngram_tu": 0.7863,
+        "ngram_ky_tu": 0.1276
+      }
+    },
+    {
+      "aspect": "PERFORMANCE",
+      "true": "Positive",
+      "pred": "Neutral",
+      "confusion": "Positive->Neutral",
+      "n_words": 22,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.5426232117327818,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.247021326903889,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.6955,
+        "aspect_onehot": 0.0723,
+        "ngram_ky_tu": 0.2094,
+        "artifact_ky_tu": 0.0228
+      }
+    },
+    {
+      "aspect": "CAMERA",
+      "true": "Negative",
+      "pred": "Positive",
+      "confusion": "Negative->Positive",
+      "n_words": 58,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.8609909592130066,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.30901517391362365,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.1279,
+        "ngram_tu": 0.7577,
+        "ngram_ky_tu": 0.1144
+      }
+    },
+    {
+      "aspect": "CAMERA",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 33,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.6901827691381128,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 0.22519175986931156,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.0842,
+        "ngram_tu": 0.682,
+        "ngram_ky_tu": 0.2339
+      }
+    },
+    {
+      "aspect": "FEATURES",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 27,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.5377577386144842,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 1.314491543624515,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.3962,
+        "ngram_tu": 0.4805,
+        "ngram_ky_tu": 0.1234
+      }
+    },
+    {
+      "aspect": "PRICE",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 106,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.802182969096539,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.9543037536148997,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.3091,
+        "ngram_tu": 0.6443,
+        "ngram_ky_tu": 0.0466
+      }
+    },
+    {
+      "aspect": "FEATURES",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 18,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.900517454096175,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 1.314491543624515,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.4211,
+        "ngram_tu": 0.3984,
+        "ngram_ky_tu": 0.1804
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Positive",
+      "pred": "Neutral",
+      "confusion": "Positive->Neutral",
+      "n_words": 81,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.5920659352165587,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.23819444865438452,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.1033,
+        "ngram_tu": 0.8771,
+        "artifact_ky_tu": 0.0196
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Positive",
+      "pred": "Negative",
+      "confusion": "Positive->Negative",
+      "n_words": 29,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.9441285564880461,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": -0.257090801655521,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.5539,
+        "aspect_onehot": 0.0702,
+        "artifact_ky_tu": 0.1065,
+        "ngram_ky_tu": 0.2694
+      }
+    },
+    {
+      "aspect": "DESIGN",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 43,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.9133816015661008,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": 0.2821961301597805,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.1399,
+        "ngram_tu": 0.696,
+        "ngram_ky_tu": 0.1333,
+        "artifact_ky_tu": 0.0308
+      }
+    },
+    {
+      "aspect": "BATTERY",
+      "true": "Negative",
+      "pred": "Neutral",
+      "confusion": "Negative->Neutral",
+      "n_words": 49,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.9367847901664678,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.23819444865438452,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.0859,
+        "ngram_tu": 0.8439,
+        "artifact_ky_tu": 0.0493,
+        "ngram_ky_tu": 0.0209
+      }
+    },
+    {
+      "aspect": "PERFORMANCE",
+      "true": "Neutral",
+      "pred": "Negative",
+      "confusion": "Neutral->Negative",
+      "n_words": 67,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.6072874848777114,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": -0.11463581435294733,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.8519,
+        "aspect_onehot": 0.0592,
+        "ngram_ky_tu": 0.0674,
+        "artifact_ky_tu": 0.0215
+      }
+    },
+    {
+      "aspect": "CAMERA",
+      "true": "Positive",
+      "pred": "Neutral",
+      "confusion": "Positive->Neutral",
+      "n_words": 46,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.7405322820010887,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.1805951318219979,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.8694,
+        "artifact_ky_tu": 0.0551,
+        "aspect_onehot": 0.0354,
+        "ngram_ky_tu": 0.04
+      }
+    },
+    {
+      "aspect": "PERFORMANCE",
+      "true": "Positive",
+      "pred": "Neutral",
+      "confusion": "Positive->Neutral",
+      "n_words": 18,
+      "co_tu_tuong_phan": false,
+      "prob_pred": 0.9125507482033246,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.4245591066864923,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.6774,
+        "aspect_onehot": 0.0442,
+        "ngram_ky_tu": 0.2784
+      }
+    },
+    {
+      "aspect": "CAMERA",
+      "true": "Positive",
+      "pred": "Neutral",
+      "confusion": "Positive->Neutral",
+      "n_words": 48,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.679609163467411,
+      "top_feature_kind": "ngram_tu",
+      "top_feature_contribution": 0.10476340816732535,
+      "ty_le_dong_gop": {
+        "ngram_tu": 0.8259,
+        "aspect_onehot": 0.0517,
+        "ngram_ky_tu": 0.074,
+        "artifact_ky_tu": 0.0485
+      }
+    },
+    {
+      "aspect": "CAMERA",
+      "true": "Negative",
+      "pred": "Positive",
+      "confusion": "Negative->Positive",
+      "n_words": 205,
+      "co_tu_tuong_phan": true,
+      "prob_pred": 0.7701929686903114,
+      "top_feature_kind": "aspect_onehot",
+      "top_feature_contribution": -0.30901517391362365,
+      "ty_le_dong_gop": {
+        "aspect_onehot": 0.1431,
+        "ngram_tu": 0.8171,
+        "ngram_ky_tu": 0.0398
+      }
+    }
+  ]
+}

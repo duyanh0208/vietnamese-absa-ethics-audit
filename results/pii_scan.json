@@ -1,0 +1,86 @@
+{
+  "purpose": "Quet PII trong noi dung binh luan, phuc vu muc 2.3 cua docs/ETHICS.md va muc A4 cua docs/CHECKLIST.md.",
+  "note_output_safety": "Tep nay nam trong repository nen KHONG chua noi dung binh luan tho. Moi chuoi khop deu da bi che: chu so -> #, chu cai -> x.",
+  "patterns": {
+    "email": {
+      "regex": "\\b[\\w.+-]+@[\\w-]+\\.[\\w.-]+\\b",
+      "do_tin_cay": "Do tin cay cao. Rat it kha nang duong tinh gia."
+    },
+    "url": {
+      "regex": "\\b(?:https?://|www\\.)\\S+",
+      "do_tin_cay": "Do tin cay cao. Ban than URL chua chac la PII nhung co the tro toi trang ca nhan."
+    },
+    "social_handle": {
+      "regex": "\\b(?:fb\\.com/|facebook\\.com/|zalo\\s*[:.]?\\s*\\d|@[A-Za-z][\\w.]{3,})",
+      "do_tin_cay": "Do tin cay trung binh. '@' con duoc dung de tag thong thuong."
+    },
+    "phone_vn": {
+      "regex": "(?<!\\d)(?:\\+?84|0)\\d{8,10}(?!\\d)",
+      "do_tin_cay": "Do tin cay TRUNG BINH THAP. Day so lien tuc 9-11 chu so bat dau bang 0 cung khop voi gia tien viet lien (vi du '0' dung dau mot day gia). Bat buoc tham dinh thu cong."
+    },
+    "long_digits": {
+      "regex": "(?<!\\d)\\d{8,}(?!\\d)",
+      "do_tin_cay": "Do tin cay THAP. Chu yeu la gia tien (vi du 20000000). Giu lai vi ma don hang cung roi vao mau nay; can loc tay."
+    }
+  },
+  "limitations": [
+    "Khong bat duoc ten rieng va dia chi: can NER tieng Viet, va chinh viec chay NER tren du lieu nay lai la mot buoc xu ly them can can nhac rieng.",
+    "Khong bat duoc so dien thoai viet bang chu hoac chen ky tu la (vi du '09xx xxx xxx', 'khong chin ...').",
+    "Mau phone_vn va long_digits co ty le duong tinh gia cao vi gia tien trong binh luan dien thoai thuong la day so dai.",
+    "Ket qua la dieu kien CAN de trich vi du, khong phai dieu kien DU. Moi ban ghi bi gan co van phai duoc doc bang mat truoc khi dua vao luan van."
+  ],
+  "per_split": {
+    "train": {
+      "n_comments": 7671,
+      "n_comments_flagged": 6,
+      "pct_comments_flagged": 0.078,
+      "n_matches_by_pattern": {
+        "long_digits": 5,
+        "social_handle": 1,
+        "phone_vn": 3,
+        "url": 1
+      }
+    },
+    "dev": {
+      "n_comments": 1094,
+      "n_comments_flagged": 1,
+      "pct_comments_flagged": 0.091,
+      "n_matches_by_pattern": {
+        "social_handle": 1
+      }
+    },
+    "test": {
+      "n_comments": 2187,
+      "n_comments_flagged": 0,
+      "pct_comments_flagged": 0.0,
+      "n_matches_by_pattern": {}
+    }
+  },
+  "total_matches_by_pattern": {
+    "long_digits": 5,
+    "social_handle": 2,
+    "phone_vn": 3,
+    "url": 1
+  },
+  "masked_examples": {
+    "long_digits": [
+      "#############################",
+      "##########",
+      "##########",
+      "##########",
+      "########"
+    ],
+    "social_handle": [
+      "xxxx #",
+      "xxxx #"
+    ],
+    "phone_vn": [
+      "##########",
+      "##########",
+      "##########"
+    ],
+    "url": [
+      "xxxxx://xxxxx.xx/xxx#xxx#xxx"
+    ]
+  }
+}

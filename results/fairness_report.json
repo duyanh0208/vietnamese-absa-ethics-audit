@@ -1,0 +1,483 @@
+{
+  "aspect": {
+    "group_col": "aspect",
+    "positive_class": "Negative",
+    "n_groups_evaluated": 9,
+    "n_groups_excluded_small": 1,
+    "per_group": [
+      {
+        "group": "PRICE",
+        "n": 569,
+        "n_negative": 79,
+        "tpr": 0.45569620253164556,
+        "macro_f1": 0.6179238947040804,
+        "selection_rate": 0.09490333919156414,
+        "reliable": true,
+        "tpr_ci": [
+          0.346141975308642,
+          0.5625
+        ]
+      },
+      {
+        "group": "STORAGE",
+        "n": 27,
+        "n_negative": 6,
+        "tpr": 0.6666666666666666,
+        "macro_f1": 0.5126945126945127,
+        "selection_rate": 0.18518518518518517,
+        "reliable": false,
+        "tpr_ci": [
+          0.25,
+          1.0
+        ]
+      },
+      {
+        "group": "DESIGN",
+        "n": 398,
+        "n_negative": 96,
+        "tpr": 0.6979166666666666,
+        "macro_f1": 0.5448780998963336,
+        "selection_rate": 0.271356783919598,
+        "reliable": true,
+        "tpr_ci": [
+          0.6063749194068344,
+          0.7884722222222221
+        ]
+      },
+      {
+        "group": "CAMERA",
+        "n": 588,
+        "n_negative": 171,
+        "tpr": 0.7251461988304093,
+        "macro_f1": 0.6511119652686407,
+        "selection_rate": 0.2976190476190476,
+        "reliable": true,
+        "tpr_ci": [
+          0.6569998284881229,
+          0.7898241733094321
+        ]
+      },
+      {
+        "group": "SER&ACC",
+        "n": 593,
+        "n_negative": 167,
+        "tpr": 0.7964071856287425,
+        "macro_f1": 0.6178140120315745,
+        "selection_rate": 0.26812816188870153,
+        "reliable": true,
+        "tpr_ci": [
+          0.7302605472013367,
+          0.8545707070707069
+        ]
+      },
+      {
+        "group": "BATTERY",
+        "n": 1014,
+        "n_negative": 368,
+        "tpr": 0.8043478260869565,
+        "macro_f1": 0.6113607450501264,
+        "selection_rate": 0.3865877712031558,
+        "reliable": true,
+        "tpr_ci": [
+          0.7620481927710844,
+          0.8450769953051642
+        ]
+      },
+      {
+        "group": "GENERAL",
+        "n": 1381,
+        "n_negative": 294,
+        "tpr": 0.8095238095238095,
+        "macro_f1": 0.6820841124525696,
+        "selection_rate": 0.20926864590876176,
+        "reliable": true,
+        "tpr_ci": [
+          0.7644954815007995,
+          0.8525261062053368
+        ]
+      },
+      {
+        "group": "SCREEN",
+        "n": 269,
+        "n_negative": 116,
+        "tpr": 0.8620689655172413,
+        "macro_f1": 0.5616717892792862,
+        "selection_rate": 0.4721189591078067,
+        "reliable": true,
+        "tpr_ci": [
+          0.7946428571428571,
+          0.9207985930171965
+        ]
+      },
+      {
+        "group": "PERFORMANCE",
+        "n": 1172,
+        "n_negative": 454,
+        "tpr": 0.8700440528634361,
+        "macro_f1": 0.6431336453126401,
+        "selection_rate": 0.4274744027303754,
+        "reliable": true,
+        "tpr_ci": [
+          0.8397432279909707,
+          0.9
+        ]
+      },
+      {
+        "group": "FEATURES",
+        "n": 711,
+        "n_negative": 459,
+        "tpr": 0.9302832244008714,
+        "macro_f1": 0.6328826987716741,
+        "selection_rate": 0.7116736990154712,
+        "reliable": true,
+        "tpr_ci": [
+          0.9061135371179039,
+          0.9525887560252132
+        ]
+      }
+    ],
+    "equal_opportunity_gap": 0.47458702186922586,
+    "macro_f1_gap": 0.137206012556236,
+    "worst_group": {
+      "group": "PRICE",
+      "tpr": 0.45569620253164556,
+      "n": 569
+    },
+    "bootstrap": {
+      "n_bootstrap": 2000,
+      "seed": 42,
+      "ci_level": 0.95,
+      "resample_unit": "sample",
+      "n_groups_in_gap": 9,
+      "n_replicates_used": 2000,
+      "n_replicates_dropped": 0,
+      "equal_opportunity_gap_ci": [
+        0.3647918297466318,
+        0.5884929285825908
+      ],
+      "equal_opportunity_gap_bootstrap_mean": 0.47603508328157884,
+      "per_group_tpr_ci": {
+        "SCREEN": [
+          0.7946428571428571,
+          0.9207985930171965
+        ],
+        "FEATURES": [
+          0.9061135371179039,
+          0.9525887560252132
+        ],
+        "PERFORMANCE": [
+          0.8397432279909707,
+          0.9
+        ],
+        "GENERAL": [
+          0.7644954815007995,
+          0.8525261062053368
+        ],
+        "SER&ACC": [
+          0.7302605472013367,
+          0.8545707070707069
+        ],
+        "DESIGN": [
+          0.6063749194068344,
+          0.7884722222222221
+        ],
+        "BATTERY": [
+          0.7620481927710844,
+          0.8450769953051642
+        ],
+        "CAMERA": [
+          0.6569998284881229,
+          0.7898241733094321
+        ],
+        "PRICE": [
+          0.346141975308642,
+          0.5625
+        ],
+        "STORAGE": [
+          0.25,
+          1.0
+        ]
+      }
+    }
+  },
+  "star_bucket": {
+    "group_col": "star_bucket",
+    "positive_class": "Negative",
+    "n_groups_evaluated": 3,
+    "n_groups_excluded_small": 0,
+    "per_group": [
+      {
+        "group": "4-5 sao",
+        "n": 4639,
+        "n_negative": 600,
+        "tpr": 0.6083333333333333,
+        "macro_f1": 0.6586751131485148,
+        "selection_rate": 0.1399008406984264,
+        "reliable": true,
+        "tpr_ci": [
+          0.5704596460479631,
+          0.6472494680143636
+        ]
+      },
+      {
+        "group": "3 sao",
+        "n": 637,
+        "n_negative": 380,
+        "tpr": 0.8526315789473684,
+        "macro_f1": 0.6074470749567896,
+        "selection_rate": 0.6609105180533752,
+        "reliable": true,
+        "tpr_ci": [
+          0.8165817784010492,
+          0.8866331099951662
+        ]
+      },
+      {
+        "group": "1-2 sao",
+        "n": 1446,
+        "n_negative": 1230,
+        "tpr": 0.9195121951219513,
+        "macro_f1": 0.5423012026566146,
+        "selection_rate": 0.8616874135546335,
+        "reliable": true,
+        "tpr_ci": [
+          0.9038601649208657,
+          0.9345563307364079
+        ]
+      }
+    ],
+    "equal_opportunity_gap": 0.311178861788618,
+    "macro_f1_gap": 0.11637391049190016,
+    "worst_group": {
+      "group": "4-5 sao",
+      "tpr": 0.6083333333333333,
+      "n": 4639
+    },
+    "bootstrap": {
+      "n_bootstrap": 2000,
+      "seed": 42,
+      "ci_level": 0.95,
+      "resample_unit": "sample",
+      "n_groups_in_gap": 3,
+      "n_replicates_used": 2000,
+      "n_replicates_dropped": 0,
+      "equal_opportunity_gap_ci": [
+        0.26921067221914297,
+        0.35174411686527146
+      ],
+      "equal_opportunity_gap_bootstrap_mean": 0.31043556498596886,
+      "per_group_tpr_ci": {
+        "4-5 sao": [
+          0.5704596460479631,
+          0.6472494680143636
+        ],
+        "1-2 sao": [
+          0.9038601649208657,
+          0.9345563307364079
+        ],
+        "3 sao": [
+          0.8165817784010492,
+          0.8866331099951662
+        ]
+      }
+    }
+  },
+  "length_bucket": {
+    "group_col": "length_bucket",
+    "positive_class": "Negative",
+    "n_groups_evaluated": 4,
+    "n_groups_excluded_small": 0,
+    "per_group": [
+      {
+        "group": "Q4 (49-205 tu)",
+        "n": 1672,
+        "n_negative": 611,
+        "tpr": 0.7741407528641571,
+        "macro_f1": 0.6477903029204066,
+        "selection_rate": 0.3803827751196172,
+        "reliable": true,
+        "tpr_ci": [
+          0.7410348051634696,
+          0.8055555555555556
+        ]
+      },
+      {
+        "group": "Q3 (33-48 tu)",
+        "n": 1594,
+        "n_negative": 545,
+        "tpr": 0.8110091743119267,
+        "macro_f1": 0.7073457377183295,
+        "selection_rate": 0.363237139272271,
+        "reliable": true,
+        "tpr_ci": [
+          0.7781903168737784,
+          0.8429925301862337
+        ]
+      },
+      {
+        "group": "Q1 (2-23 tu)",
+        "n": 1705,
+        "n_negative": 484,
+        "tpr": 0.8471074380165289,
+        "macro_f1": 0.7653617095685296,
+        "selection_rate": 0.29149560117302054,
+        "reliable": true,
+        "tpr_ci": [
+          0.8148112398112398,
+          0.8795698924731182
+        ]
+      },
+      {
+        "group": "Q2 (24-32 tu)",
+        "n": 1751,
+        "n_negative": 570,
+        "tpr": 0.868421052631579,
+        "macro_f1": 0.7353941304860921,
+        "selection_rate": 0.3449457452884066,
+        "reliable": true,
+        "tpr_ci": [
+          0.8381290414548631,
+          0.8953426932367149
+        ]
+      }
+    ],
+    "equal_opportunity_gap": 0.09428029976742192,
+    "macro_f1_gap": 0.11757140664812293,
+    "worst_group": {
+      "group": "Q4 (49-205 tu)",
+      "tpr": 0.7741407528641571,
+      "n": 1672
+    },
+    "bootstrap": {
+      "n_bootstrap": 2000,
+      "seed": 42,
+      "ci_level": 0.95,
+      "resample_unit": "sample",
+      "n_groups_in_gap": 4,
+      "n_replicates_used": 2000,
+      "n_replicates_dropped": 0,
+      "equal_opportunity_gap_ci": [
+        0.05880128913339952,
+        0.1383064261163066
+      ],
+      "equal_opportunity_gap_bootstrap_mean": 0.09688590819040224,
+      "per_group_tpr_ci": {
+        "Q3 (33-48 tu)": [
+          0.7781903168737784,
+          0.8429925301862337
+        ],
+        "Q2 (24-32 tu)": [
+          0.8381290414548631,
+          0.8953426932367149
+        ],
+        "Q1 (2-23 tu)": [
+          0.8148112398112398,
+          0.8795698924731182
+        ],
+        "Q4 (49-205 tu)": [
+          0.7410348051634696,
+          0.8055555555555556
+        ]
+      }
+    }
+  },
+  "writing_bucket": {
+    "group_col": "writing_bucket",
+    "positive_class": "Negative",
+    "n_groups_evaluated": 4,
+    "n_groups_excluded_small": 0,
+    "per_group": [
+      {
+        "group": "Q3 (22-28% tu khong dau)",
+        "n": 1657,
+        "n_negative": 540,
+        "tpr": 0.7981481481481482,
+        "macro_f1": 0.7074150017860571,
+        "selection_rate": 0.3277006638503319,
+        "reliable": true,
+        "tpr_ci": [
+          0.7608656832298137,
+          0.8321233924226624
+        ]
+      },
+      {
+        "group": "Q2 (17-22% tu khong dau)",
+        "n": 1565,
+        "n_negative": 465,
+        "tpr": 0.810752688172043,
+        "macro_f1": 0.7109878327041491,
+        "selection_rate": 0.31629392971246006,
+        "reliable": true,
+        "tpr_ci": [
+          0.7737513873473918,
+          0.8463204668382842
+        ]
+      },
+      {
+        "group": "Q4 (28-100% tu khong dau)",
+        "n": 1669,
+        "n_negative": 584,
+        "tpr": 0.827054794520548,
+        "macro_f1": 0.6987744052637669,
+        "selection_rate": 0.3822648292390653,
+        "reliable": true,
+        "tpr_ci": [
+          0.796875,
+          0.8554859887332081
+        ]
+      },
+      {
+        "group": "Q1 (0-17% tu khong dau)",
+        "n": 1831,
+        "n_negative": 621,
+        "tpr": 0.8518518518518519,
+        "macro_f1": 0.7287757709440829,
+        "selection_rate": 0.3495357728017477,
+        "reliable": true,
+        "tpr_ci": [
+          0.8243848834092736,
+          0.8795731707317073
+        ]
+      }
+    ],
+    "equal_opportunity_gap": 0.0537037037037037,
+    "macro_f1_gap": 0.030001365680315972,
+    "worst_group": {
+      "group": "Q3 (22-28% tu khong dau)",
+      "tpr": 0.7981481481481482,
+      "n": 1657
+    },
+    "bootstrap": {
+      "n_bootstrap": 2000,
+      "seed": 42,
+      "ci_level": 0.95,
+      "resample_unit": "sample",
+      "n_groups_in_gap": 4,
+      "n_replicates_used": 2000,
+      "n_replicates_dropped": 0,
+      "equal_opportunity_gap_ci": [
+        0.024592334786119902,
+        0.0994301081138382
+      ],
+      "equal_opportunity_gap_bootstrap_mean": 0.0605391264292468,
+      "per_group_tpr_ci": {
+        "Q3 (22-28% tu khong dau)": [
+          0.7608656832298137,
+          0.8321233924226624
+        ],
+        "Q1 (0-17% tu khong dau)": [
+          0.8243848834092736,
+          0.8795731707317073
+        ],
+        "Q2 (17-22% tu khong dau)": [
+          0.7737513873473918,
+          0.8463204668382842
+        ],
+        "Q4 (28-100% tu khong dau)": [
+          0.796875,
+          0.8554859887332081
+        ]
+      }
+    }
+  }
+}

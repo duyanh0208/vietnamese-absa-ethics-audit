@@ -1,0 +1,49 @@
+{
+  "model": "tfidf_logreg_baseline",
+  "seed": 42,
+  "C": 4.0,
+  "environment": {
+    "python": "3.13.9",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.1"
+  },
+  "n_train_pairs": 23872,
+  "n_test_pairs": 6722,
+  "dev_macro_f1": 0.7099657484428127,
+  "test_macro_f1": 0.7130793099622768,
+  "test_report": {
+    "Negative": {
+      "precision": 0.7858376511226253,
+      "recall": 0.8235294117647058,
+      "f1-score": 0.8042421564295184,
+      "support": 2210.0
+    },
+    "Neutral": {
+      "precision": 0.43968095712861416,
+      "recall": 0.5397796817625459,
+      "f1-score": 0.4846153846153846,
+      "support": 817.0
+    },
+    "Positive": {
+      "precision": 0.8868645312959154,
+      "recall": 0.8167794316644114,
+      "f1-score": 0.8503803888419273,
+      "support": 3695.0
+    },
+    "accuracy": 0.7853317465040167,
+    "macro avg": {
+      "precision": 0.7041277131823849,
+      "recall": 0.7266961750638877,
+      "f1-score": 0.7130793099622768,
+      "support": 6722.0
+    },
+    "weighted avg": {
+      "precision": 0.7992985709749311,
+      "recall": 0.7853317465040167,
+      "f1-score": 0.7907559464015064,
+      "support": 6722.0
+    }
+  }
+}
